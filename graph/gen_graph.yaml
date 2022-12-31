@@ -1,0 +1,19 @@
+schema:
+  - schemas/*.graphql
+exec:
+  dir: gen
+  filename: generated.go
+  package: graph
+
+# federation:
+#   filename: todo/federation_gen.go
+#   package: todo
+resolver:
+  type: Resolver
+  layout: follow-schema
+  dir: resolvers
+  package: resolvers
+  
+model:
+  filename: model/model.go
+  package: model

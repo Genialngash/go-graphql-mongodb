@@ -1,0 +1,16 @@
+schema:
+  - schemas/jobs.graphql
+exec:
+  dir: gen
+  filename: generated.go
+  package: graph
+
+resolver:
+  type: Resolver
+  layout: follow-schema
+  dir: resolvers
+  package: resolvers
+  
+model:
+  filename: model/job.model.go
+  package: model

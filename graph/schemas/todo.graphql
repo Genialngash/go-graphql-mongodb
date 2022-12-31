@@ -1,0 +1,20 @@
+type Todo {
+  id: ID!
+  databaseId: Int!
+  text: String!
+  done: Boolean!
+  # user: User!
+}
+
+input NewTodo {
+  text: String!
+  userId: String!
+}
+
+
+extend type Query {
+  getTodos:[Todo]
+}
+extend type Mutation {
+  deletetodo: Boolean!
+}
